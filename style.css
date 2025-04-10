@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .pantalla {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .splash-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .menu-inferior {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 100;
+  }
+  
+  .menu-inferior button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .seccion {
+    display: none;
+    padding: 20px;
+    margin-bottom: 60px; /* espacio para el menú */
+  }
+  
+  .seccion.activa {
+    display: block;
+  }
+  
+  .oculto {
+    display: none !important;
+  }
+  
