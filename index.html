@@ -19,9 +19,13 @@
     <!-- Secciones -->
     <section id="home" class="seccion activa"></section>
     <section id="buscar" class="seccion"></section>
-    <section id="favoritos" class="seccion"></section>
+    <section id="favoritos" class="seccion">
+      <h2>Favoritos</h2>
+      <div id="favoritos-contenedor"></div>
+    </section>
     <section id="registro" class="seccion"></section>
     <section id="info-extra" class="seccion"></section>
+    
   </main>
 
   
@@ -32,11 +36,7 @@
 <script type="module" src="js/favoritos.js"></script>
   <script src="js/registro.js"></script>
 
-  <section id="favoritos" class="seccion">
-    <h2>Favoritos</h2>
-    <div id="favoritos-contenedor"></div>
-  </section>
-  
+
   <script>
     function mostrarSeccion(id) {
       document.querySelectorAll('.seccion').forEach(sec => sec.classList.remove('activa'));
