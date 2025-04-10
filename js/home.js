@@ -1,5 +1,6 @@
 import { obtenerFestivos } from './api.js';
 
+
 document.addEventListener("DOMContentLoaded", async () => {
   const contenedor = document.getElementById("home");
   contenedor.innerHTML = "<h2>Festivos en Austria 2025</h2>";
