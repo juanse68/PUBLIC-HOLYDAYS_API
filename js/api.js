@@ -1,6 +1,8 @@
-export async function obtenerFestivos() {
-    const url = "https://date.nager.at/api/v3/PublicHolidays/2025/AT";
-    const response = await fetch(url);
-    return await response.json();
-  }
-  
+fetch('https://date.nager.at/api/v3/PublicHolidays/2025/ES')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Feriados:', data);
+  })
+  .catch(error => {
+    console.error('Error al obtener los feriados:', error);
+  });
