@@ -1,56 +1,138 @@
-body {
+/* RESET */
+* {
     margin: 0;
-    font-family: sans-serif;
-    background-color: #f9f9f9;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f4f4;
     color: #333;
   }
   
-  .pantalla {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .splash-contenido {
+  /* Splash screen */
+  #splash {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    background-color: #0077cc;
+    color: white;
     font-size: 24px;
     font-weight: bold;
   }
   
+  /* Ocultar elementos */
+  .oculto {
+    display: none !important;
+  }
+  
+  /* Menú inferior */
   .menu-inferior {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #fff;
-    border-top: 1px solid #ccc;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    z-index: 100;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
   }
   
   .menu-inferior button {
     background: none;
     border: none;
     font-size: 14px;
-    color: #444;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
   }
   
+  .menu-inferior button:hover {
+    color: #0077cc;
+  }
+  
+  /* Secciones */
   .seccion {
     display: none;
     padding: 20px;
-    margin-bottom: 60px; /* espacio para el menú */
+    padding-bottom: 80px; /* espacio para menú inferior */
   }
   
   .seccion.activa {
     display: block;
   }
   
-  .oculto {
-    display: none !important;
+  /* Títulos */
+  h2 {
+    margin-bottom: 15px;
+    color: #0077cc;
+  }
+  
+  /* Listado de festivos */
+  .festivo {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  /* Buscador */
+  #buscar input[type=\"text\"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  /* Registro */
+  #registro input,
+  #registro select,
+  #registro button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  #registro button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #registro button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Favoritos */
+  #favoritos div {
+    display: flex;
+    justify-content: space-between;
+    background: #fff8dc;
+    border: 1px solid #ffd700;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .menu-inferior button {
+      font-size: 12px;
+    }
+  
+    .seccion {
+      padding: 15px;
+    }
   }
   
