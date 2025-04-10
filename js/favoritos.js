@@ -1,8 +1,9 @@
-const contenedor = document.getElementById("favoritos");
+const contenedor = document.getElementById("favoritos-contenedor");
 
 function cargarFavoritos() {
   const favs = JSON.parse(localStorage.getItem("favoritos") || "[]");
-  contenedor.innerHTML = "<h2>Favoritos</h2>";
+  contenedor.innerHTML = "";
+  
   favs.forEach((f, i) => {
     const div = document.createElement("div");
     div.innerHTML = `${f} <button onclick="eliminarFavorito(${i})">❌</button>`;
@@ -15,6 +16,6 @@ window.eliminarFavorito = function (index) {
   favs.splice(index, 1);
   localStorage.setItem("favoritos", JSON.stringify(favs));
   cargarFavoritos();
-}
+};
 
 document.addEventListener("DOMContentLoaded", cargarFavoritos);
