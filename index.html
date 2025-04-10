@@ -29,10 +29,14 @@
 <script type="module" src="js/home.js"></script>
 <script type="module" src="js/busqueda.js"></script>
 <script type="module" src="js/extras.js"></script>
-
-  <script src="js/favoritos.js"></script>
+<script type="module" src="js/favoritos.js"></script>
   <script src="js/registro.js"></script>
- 
+
+  <section id="favoritos" class="seccion">
+    <h2>Favoritos</h2>
+    <div id="favoritos-contenedor"></div>
+  </section>
+  
   <script>
     function mostrarSeccion(id) {
       document.querySelectorAll('.seccion').forEach(sec => sec.classList.remove('activa'));
