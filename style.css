@@ -1,4 +1,4 @@
-/* Estilos globales */
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +6,45 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  background-color: #F8F9FA;
   color: #333;
 }
 
-h2 {
-  color: #333;
-  text-align: center;
-  margin: 20px 0;
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Diseño principal */
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Menú inferior */
+.menu-inferior {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FF5C00;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-inferior button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu-inferior button:hover {
+  text-decoration: underline;
 }
 
 /* Secciones */
@@ -27,143 +57,147 @@ h2 {
   display: block;
 }
 
-#home, #buscar, #favoritos, #registro, #info-extra {
+/* Estilos para la pestaña "Info" */
+#info {
+  background-color: #FFED00;
+  color: #333;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#info h1 {
+  color: #FF5C00;
   margin-bottom: 20px;
 }
 
-/* Menú inferior */
-.menu-inferior {
-  display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  padding: 10px;
+#info p {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-.menu-inferior button {
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 10px;
+#info img {
+  width: 200px;
+  height: auto;
+  margin: 20px 0;
+}
+
+#info .footer {
   font-size: 14px;
-  cursor: pointer;
+  margin-top: 20px;
+  color: #888;
 }
 
-.menu-inferior button:hover {
-  background-color: #555;
+/* Estilos para "Favoritos" */
+#favoritos {
+  background-color: #FFDC00;
+  padding: 20px;
+}
+
+#favoritos h2 {
+  color: #FF5C00;
+  margin-bottom: 20px;
+}
+
+#favoritos-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.favorito-card {
+  background-color: #F7F7F7;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorito-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 /* Sección de búsqueda */
 #buscar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#buscador {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-#filtro-fecha {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-#resultados {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-#resultados div {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-#resultados div:last-child {
-  border-bottom: none;
-}
-
-/* Sección de favoritos */
-#favoritos-contenedor {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-#favoritos-contenedor div {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#favoritos-contenedor button {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-#favoritos-contenedor button:hover {
-  background-color: #c0392b;
-}
-
-/* Pestaña informativa */
-.info-container {
-  background-color: #fff;
+  background-color: #FFE600;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.info-box {
-  margin-bottom: 20px;
-}
-
-.info-box ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-.info-box ul li {
-  margin-bottom: 10px;
-}
-
-.info-box a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.info-box a:hover {
-  text-decoration: underline;
-}
-
-.info-img {
+#buscar input[type="search"] {
   width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Fondo en la sección de info-extra */
-#info-extra {
-  padding: 40px 20px;
-  color: #fff;
+#buscar button {
+  padding: 10px;
+  background-color: #FF5C00;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#buscar button:hover {
+  background-color: #FF4500;
+}
+
+/* Ajustes para el contenido visual */
+.main-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+h3 {
+  color: #FF5C00;
+}
+
+footer {
   text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Splash screen (puedes agregarlo al inicio) */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.splash-screen img {
+  width: 200px;
+  height: auto;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.activa {
+  animation: fadeIn 0.5s ease-in-out;
 }
