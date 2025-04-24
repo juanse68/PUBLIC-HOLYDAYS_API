@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>Festivos 2025 - Austria</title>
+  <title>Festivos 2025 - Colombia</title>
 </head>
 <body>
-    <main class="pantalla" id="main">
+  <main class="pantalla" id="app">
     <!-- Menú inferior -->
     <nav class="menu-inferior">
       <button onclick="mostrarSeccion('home')">Inicio</button>
       <button onclick="mostrarSeccion('buscar')">Buscar</button>
       <button onclick="mostrarSeccion('favoritos')">Favoritos</button>
-      <button onclick="mostrarSeccion('registro')">Perfil</button>
+      <button onclick="mostrarSeccion('info')">Info</button>
     </nav>
 
     <!-- Secciones -->
@@ -23,19 +23,18 @@
       <h2>Favoritos</h2>
       <div id="favoritos-contenedor"></div>
     </section>
+    <section id="info" class="seccion"></section>
     <section id="registro" class="seccion"></section>
-    <section id="info-extra" class="seccion"></section>
-    
+    <section id="extra" class="seccion"></section>
   </main>
 
-  
- 
-<script type="module" src="js/home.js"></script>
-<script type="module" src="js/busqueda.js"></script>
-<script type="module" src="js/extras.js"></script>
-<script type="module" src="js/favoritos.js"></script>
-  <script src="js/registro.js"></script>
-
+  <!-- JS dinámico modular -->
+  <script type="module" src="js/home.js"></script>
+  <script type="module" src="js/busqueda.js"></script>
+  <script type="module" src="js/favoritos.js"></script>
+  <script type="module" src="js/info.js"></script>
+  <script type="module" src="js/registro.js"></script>
+  <script type="module" src="js/extra.js"></script>
 
   <script>
     function mostrarSeccion(id) {
@@ -43,5 +42,6 @@
       document.getElementById(id).classList.add('activa');
     }
   </script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
